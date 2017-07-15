@@ -1,0 +1,78 @@
+public void maketimetableperday()
+{
+	String[][] _mytable=new String[5][_MAX_LECTURES_PER_DAY*2];
+	int[] flags=new int[_mycourses.size()];
+	int[] hours=new int[_WORKING_DAYS_PER_WEEK];
+	for(int i=0;i<_mycourses.size();i++)
+	{
+		flags[i]=_mycourses.get(i).get_myhoursperweek();
+	}
+	for(int i=0;i<_WORKING_DAYS_PER_WEEK;i++)
+	{
+		Random rj=new Random();
+		hours[i]=rj.nextInt(_MAX_LECTURES_PER_DAY)+1;
+		int count=0;
+		int reh=hours[i];
+		while(reh>0)
+		{
+		Random rm=new Random();
+		int temp=rm.nextInt(_mycourses.size());
+		if(flags[temp]>0)
+		{
+	_mytable[i][count++]=_mycourses.get(temp).get_myname();
+	_mytable[i][count++]=_mycourses.get(temp).get_myprofessor().get_myname();
+	if(_mycourses.get(temp).get_myvenuetype().get_mytypename().equals("Lec"))
+	{
+	flags[temp]--;
+	reh--;
+	}
+	else if(_mycourses.get(temp).get_myvenuetype().get_mytypename().equals("Lab"))
+	{
+	flags[temp]=flags[temp]-3;
+	reh=reh-3;
+	}
+		}
+	}
+	}
+	/*for(int i=0;i<_mycourses.size();i++)
+	{
+		if(flags[i]>0)
+		{
+			while(flags[i]!=0)
+			{
+				for(int j=0;j<_WORKING_DAYS_PER_WEEK;j++)
+				{
+					if(hours[j]+flags[i]<=8)
+					{
+						_mytable[i][hours[j]*2]=_mycourses.get(i).get_myname();
+						_mytable[i][(hours[j]*2)+1]=_mycourses.get(i).get_myprofessor().get_myname();
+						hours[j]=hours[j]+1;
+						if(_mycourses.get(i).get_myvenuetype().get_mytypename().equals("Lec"))
+						{
+						flags[i]--;
+						hours[j]=hours[j]+1;
+						}
+						else if(_mycourses.get(i).get_myvenuetype().get_mytypename().equals("Lab"))
+						{
+						flags[i]=flags[i]-3;
+						hours[j]=hours[j]+3;
+						}
+					}
+				}
+			}
+		}
+	}
+	for(int i=0;i<_WORKING_DAYS_PER_WEEK;i++)
+	{
+		
+		for(int j=0;j<_mytable[i].length;j++)
+		{
+			System.out.println(_mytable[i][j]);
+		}
+		System.out.println();
+	}*/
+}
+public void printstuff()
+{
+	System.out.println();
+}

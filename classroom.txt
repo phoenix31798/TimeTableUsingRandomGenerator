@@ -1,0 +1,6 @@
+Classrooms	Capacity	Lab/Lec
+LT1 400 Lec
+CEP101 100 Lec
+CEP102 75 Lec
+Lab101 60 Lab
+Lab102 60 Lab

@@ -1,0 +1,11 @@
+IT114,Object Oriented Programming,Lec,Sourish Das Gupta,3
+EL114,Digital Logic Design,Lec,Sanjeev Gupta,3
+SC106,Introduction to Discrete Mathematics,Lec,V Sunitha,3
+IT314,Software Engineering,Lec,Asim Banerjee,3
+IT617,Operating System,Lec,Prasenjit Majumder,3
+EL512,VLSI Subsystem Design,Lec,Biswajit Mishra,3
+IT523,Digital Image Processing,Lec,Asim Banerjee,3
+IT479,Cryptographi,Lec,Manish Gupta,3
+IT701,Topics in Deep Learning,Lec,Manjunath Joshi,3
+CT111,Introduction to Communication Theory,Lec,Sanjeev Gupta,3
+HM106,Science-technology and Society,Lec,Madhumita Mazumdar,3
